@@ -1,0 +1,10 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+ 
+extend google.protobuf.MethodOptions {
+  SecurityOpts security = 50006;
+}
+
+message SecurityOpts {
+  bool authed = 1;
+}
