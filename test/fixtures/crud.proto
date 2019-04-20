@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service CrudTest {
+  rpc CreatePost (Post) returns (Post) {}
+  rpc ListPosts (None) returns (Post) {}
+  rpc GetPost (PostQuery) returns (Post) {}
+  rpc UpdatePost (Post) returns (Post) {}
+  rpc DeletePost (PostQuery) returns (Ok) {}
+}
+
+message Ok {
+  bool ok = 1;
+}
+
+message None {
+
+}
+
+message PostQuery {
+  required string id = 1;
+}
+
+message Post {
+  string id = 1;
+  required string content = 2;
+}
