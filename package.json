@@ -4,8 +4,12 @@
   "repository": "https://github.com/kayteh/bento",
   "license": "MIT",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
+    "@types/fs-extra": "^5.0.5",
+    "@types/glob": "^7.1.1",
     "@types/jest": "^24.0.11",
     "@types/sinon": "^7.0.11",
     "jest": "^24.7.1",
@@ -14,14 +18,17 @@
     "tslint": "^5.16.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.4.4",
-    "typescript-tslint-plugin": "^0.3.1",
-    "@types/fs-extra": "^5.0.5",
-    "@types/glob": "^7.1.1"
+    "typescript-tslint-plugin": "^0.3.1"
   },
   "dependencies": {
+    "fs-extra": "^7.0.1",
     "protobufjs": "^6.8.8"
   },
   "scripts": {
-    "lint": "tslint -p ."
+    "lint": "tslint -p .",
+    "bentoc": "node ./lib/bin/renderer.js"
+  },
+  "bin": {
+    "bentoc": "./lib/bin/renderer.js"
   }
 }
