@@ -2,7 +2,7 @@
 
 an experimental transport-agnostic RPC system based fully on node.js and protobuf.
 
-
+this is primarily used with another of my projects, https://github.com/kayteh/roleypoly
 
 ## goals
 
@@ -14,10 +14,10 @@ minimum goals for this project. none of these are requirements for your implemen
   - [ ] client: isomorphic-fetch
 
 - **wire format targets**
-  - [ ] JSON
+  - [x] JSON
   - [ ] protobuf
 
 - **generation habits**
   - [ ] on-the-fly codegen for development (e.g. does it without asking)
   - [ ] ahead-of-time codegen too
-  - [ ] ts definitions, optionally flow too (but this increases difficulty)
+  - [ ] ts & flow definitions

@@ -1,5 +1,5 @@
 {
-  "name": "bento",
+  "name": "@kayteh/bento",
   "version": "1.0.0",
   "repository": "https://github.com/kayteh/bento",
   "license": "MIT",
@@ -26,7 +26,8 @@
   },
   "scripts": {
     "lint": "tslint -p .",
-    "bentoc": "node ./lib/bin/renderer.js"
+    "bentoc": "node ./lib/bin/renderer.js",
+    "test": "jest"
   },
   "bin": {
     "bentoc": "./lib/bin/renderer.js"

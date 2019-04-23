@@ -5,7 +5,18 @@ import path from 'path'
 import fs from 'fs-extra'
 import glob from 'glob'
 
-const render = (filePath: string, root: pbjs.Root): string => {
+type RenderData = {
+  filePath: string
+  types: pbjs.Type[]
+  services: pbjs.Service[]
+}
+
+const prepRender = (filePath: string, root: pbjs.Root): RenderData => {
+  const rd: RenderData = {
+    filePath,
+    types: [],
+    services: []
+  }
   for (const obj of root.nestedArray) {
     if (!filePath.includes(obj.filename || '')) {
       continue
@@ -13,15 +24,17 @@ const render = (filePath: string, root: pbjs.Root): string => {
 
     if (obj instanceof pbjs.Type) {
       console.log('got type', obj.name)
+      rd.types.push(obj)
       continue
     }
 
     if (obj instanceof pbjs.Service) {
       console.log('got service', obj.name)
+      rd.services.push(obj)
       continue
     }
   }
-  return ``
+  return rd
 }
 
 const injectResolvePath = (root: pbjs.Root, paths: string[]) => {
@@ -81,7 +94,9 @@ const processFile = async (fileName: string) => {
   ]
   injectResolvePath(root, paths)
   const f = await root.load(fileName)
-  console.log(render(fileName, f))
+
+  const rd: RenderData = prepRender(fileName, f)
+  console.log(rd)
 }
 
 export const run = async (globPath: string) => {

@@ -1,5 +1,13 @@
-import { IBentoTransport, IBentoSerializer, BentoRequestData, BentoResponseData, BufferWithCtx } from './types'
-export { IBentoTransport, IBentoSerializer, BentoRequestData, BentoResponseData }
+import {
+  IBentoTransport,
+  IBentoSerializer,
+  BentoRequestData,
+  BentoResponseData,
+  BufferWithCtx
+} from './types'
+
+export { default as JSONSerializer } from './serializers/json'
+export { default as Transport } from './transport'
 
 type BentoCtx<C> = C | {
   bento: Bento
@@ -22,7 +30,7 @@ export default class Bento {
     private serializer: IBentoSerializer
   ) {}
 
-  private transport?: IBentoTransport
+  public transport?: IBentoTransport
   private serviceRegistry: Map<string, any> = new Map()
 
   service<T> (name: string | (() => string), impl: Service<T>) {
@@ -34,11 +42,13 @@ export default class Bento {
     this.serviceRegistry.set(name, service)
   }
 
-  addTransport (tt: Transport) {
+  addTransport (tt: Transport): IBentoTransport {
     const t = new tt(this)
     if (this.transport === undefined) {
       this.transport = t
     }
+
+    return t
   }
 
   client<T> (impl: Client<T>, tt?: IBentoTransport): T {
@@ -112,4 +122,10 @@ export default class Bento {
 
     return svc[fn](newCtx, input)
   }
+}
+
+export { IBentoTransport,
+  IBentoSerializer,
+  BentoRequestData,
+  BentoResponseData
 }
