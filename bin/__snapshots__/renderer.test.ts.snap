@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renderer renders a snapshot 1`] = `
+"import Bento, { IBentoTransport } from '@kayteh/bento'
+export type HelloWorld = {
+  username?: string
+  help: string
+  everyone?: string[]
+}
+
+export interface IHelloRpcService {
+  Hello (ctx: any, request: HelloWorld): Promise<HelloWorld>
+}
+export class HelloRpcClient {
+  static __SERVICE__: string = 'HelloRpc'
+  constructor(private bento: Bento, private transport?: IBentoTransport) {}
+  async Hello (request: HelloWorld): Promise<HelloWorld> {
+    return this.bento.makeRequest(this.transport || undefined, 'HelloRpc', 'Hello', request)
+  }
+}
+
+"
+`;

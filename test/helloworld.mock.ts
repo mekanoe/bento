@@ -9,7 +9,7 @@ export type HelloReply = {
 }
 
 export interface IHelloWorldService {
-  sayHello (ctx: any, request: HelloRequest): PromiseLike<HelloReply>
+  sayHello (ctx: any, request: HelloRequest): Promise<HelloReply>
 }
 
 export class HelloWorldClient {

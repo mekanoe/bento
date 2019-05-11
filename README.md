@@ -21,3 +21,12 @@ minimum goals for this project. none of these are requirements for your implemen
   - [ ] on-the-fly codegen for development (e.g. does it without asking)
   - [ ] ahead-of-time codegen too
   - [ ] ts & flow definitions
+
+## developing
+
+working with codegen is a little bumpy for my headspace, but regardless...
+
+```
+yarn
+yarn test
+```

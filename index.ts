@@ -110,7 +110,9 @@ export default class Bento {
       throw new Error(`Bento: service name ${service} not registered.`)
     }
 
-    const svc: { [x: string]: (ctx: BentoCtx<C>, input: I) => Promise<O> } = this.serviceRegistry.get(service)
+    const svc: { [x: string]: (ctx: BentoCtx<C>, input: I) => Promise<O> }
+      = this.serviceRegistry.get(service)
+
     if (!(fn in svc)) {
       throw new Error(`Bento: service name ${service} doesn't include a ${fn} handler.`)
     }
