@@ -21,6 +21,7 @@
     "typescript-tslint-plugin": "^0.3.1"
   },
   "dependencies": {
+    "camel-case": "^3.0.0",
     "fs-extra": "^7.0.1",
     "protobufjs": "^6.8.8"
   },

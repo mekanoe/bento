@@ -2,12 +2,12 @@
 
 exports[`ts-output renders services 1`] = `
 "export interface IHelloRpcService {
-  Hello (ctx: any, request: HelloWorld): Promise<HelloWorld>
+  hello (ctx: any, request: HelloWorld): Promise<HelloWorld> | HelloWorld
 }
 export class HelloRpcClient {
   static __SERVICE__: string = 'HelloRpc'
   constructor(private bento: Bento, private transport?: IBentoTransport) {}
-  async Hello (request: HelloWorld): Promise<HelloWorld> {
+  async hello (request: HelloWorld): Promise<HelloWorld> {
     return this.bento.makeRequest(this.transport || undefined, 'HelloRpc', 'Hello', request)
   }
 }

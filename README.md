@@ -19,8 +19,8 @@ minimum goals for this project. none of these are requirements for your implemen
 
 - **generation habits**
   - [ ] on-the-fly codegen for development (e.g. does it without asking)
-  - [ ] ahead-of-time codegen too
-  - [ ] ts & flow definitions
+  - [x] ahead-of-time codegen too
+  - [x] *ts* & flow definitions
 
 ## developing
 

@@ -12,6 +12,10 @@ message HelloWorld {
   string username = 1;
   required string help = 2;
   repeated string everyone = 3;
+}
+
+message ExcludeMe {
+  option exclude = true;
 }`)
 
 const fixtures = {

@@ -1,6 +1,7 @@
 import pbjs from 'protobufjs'
 import StringRenderer from './StringRenderer'
 import * as cp from 'child_process'
+import camelCase from 'camel-case'
 
 export const translateProtoPath = (filePath: string) => filePath.replace('.proto', '.bento.ts')
 export const postWriteTasks = (filePath: string) => {
@@ -8,9 +9,12 @@ export const postWriteTasks = (filePath: string) => {
   cp.execSync(`yarn tslint ${translateProtoPath(filePath)} --fix`, { encoding: 'utf8', shell: 'sh', stdio: 'ignore' })
 }
 
+export const transformRpcName = (inp: string) => camelCase(inp)
+
 export const resolveJSType = (t: string) => {
   switch (t) {
     case 'bool': return 'boolean'
+    case 'float': return 'number'
   }
 
   return t
@@ -33,7 +37,7 @@ export const renderService = (s: pbjs.Service): string => {
   // service interface
   r(`export interface I${s.name}Service {`)
   for (let rpc of s.methodsArray) {
-    r(`  ${rpc.name} (ctx: any, request: ${rpc.requestType}): Promise<${rpc.responseType}>`)
+    r(`  ${transformRpcName(rpc.name)} (ctx: any, request: ${rpc.requestType}): Promise<${rpc.responseType}> | ${rpc.responseType}`)
   }
   r(`}`)
 
@@ -42,7 +46,7 @@ export const renderService = (s: pbjs.Service): string => {
   r(`  static __SERVICE__: string = '${s.name}'`)
   r(`  constructor(private bento: Bento, private transport?: IBentoTransport) {}`)
   for (let rpc of s.methodsArray) {
-    r(`  async ${rpc.name} (request: ${rpc.requestType}): Promise<${rpc.responseType}> {`)
+    r(`  async ${transformRpcName(rpc.name)} (request: ${rpc.requestType}): Promise<${rpc.responseType}> {`)
     r(`    return this.bento.makeRequest(this.transport || undefined, '${s.name}', '${rpc.name}', request)`)
     r(`  }`)
   }

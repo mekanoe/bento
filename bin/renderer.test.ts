@@ -14,6 +14,10 @@ message HelloWorld {
   string username = 1;
   required string help = 2;
   repeated string everyone = 3;
+}
+
+message ExcludeMe {
+  option render.exclude = true;
 }`)
 
 describe('Renderer', () => {
@@ -30,6 +34,12 @@ describe('Renderer', () => {
         name: 'HelloRpc'
       }]
     })
+  })
+
+  it('excludes on render.exclude', () => {
+    const rd = prepRender('test.proto', _.root)
+
+    expect(rd.types.find(v => v.name === 'ExcludeMe')).toBeUndefined()
   })
 
   it('renders a snapshot', () => {
