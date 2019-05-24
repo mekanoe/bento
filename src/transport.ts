@@ -10,16 +10,16 @@ export default class Transport implements IBentoTransport {
    * Sender takes in a buffer, and waits for a response.
    */
   sender (data: Buffer): Promise<Buffer> {
-    return this.reciever({
+    return this.receiver({
       buffer: data,
       ctx: { type: 'inmemory' }
     })
   }
 
   /**
-   * Reciever takes in a buffer with ctx, and replies with a response.
+   * Receiver takes in a buffer with ctx, and replies with a response.
    */
-  reciever<C> (data: BufferWithCtx<C>): Promise<Buffer> {
-    return this.bento.recieveRequest(data)
+  receiver<C> (data: BufferWithCtx<C>): Promise<Buffer> {
+    return this.bento.receiveRequest(data)
   }
 }

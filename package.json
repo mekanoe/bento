@@ -1,6 +1,6 @@
 {
   "name": "@kayteh/bento",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2",
   "repository": "https://github.com/kayteh/bento",
   "license": "MIT",
   "main": "lib/index.js",
@@ -29,7 +29,7 @@
   },
   "scripts": {
     "lint": "tslint -p .",
-    "bentoc": "node ./lib/bin/renderer.js",
+    "bentoc": "BENTO_LOC=../.. node ./lib/bin/renderer.js",
     "test": "jest",
     "build": "tsc",
     "prepublish": "npm run build"

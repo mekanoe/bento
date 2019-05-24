@@ -1,4 +1,4 @@
-import Bento from '..'
+import Bento from '../index'
 import * as HelloWorldTest from './helloworld.mock'
 import sinon from 'sinon'
 import JSONSerializer from '../serializers/json'

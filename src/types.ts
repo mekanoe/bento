@@ -29,7 +29,7 @@ export interface IBentoTransport {
    * reciever should be called by the implementer when
    * an RPC call is incoming.
    */
-  reciever<C> (data: BufferWithCtx<C>): Promise<Buffer>
+  receiver<C> (data: BufferWithCtx<C>): Promise<Buffer>
 }
 
 export interface IBentoSerializer {

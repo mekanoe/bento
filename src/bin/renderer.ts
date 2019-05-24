@@ -84,6 +84,7 @@ const injectResolvePath = (root: pbjs.Root, paths: string[]) => {
   const mainFiles = []
   // console.log(paths)
   root.resolvePath = (origin, target) => {
+    // console.log({ origin, target })
     let normOrigin = pbjs.util.path.normalize(origin)
     let normTarget = pbjs.util.path.normalize(target)
     if (!normOrigin) {

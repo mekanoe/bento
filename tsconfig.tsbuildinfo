@@ -1,9 +1,9 @@
 {
   "program": {
     "fileInfos": {
-      "/users/katie/devel/bento/node_modules/typescript/lib/lib.d.ts": {
-        "version": "49ff9798f592c8b7e628fd881401e68810c1b3589ecd7a41b32b3c287374cde0",
-        "signature": "49ff9798f592c8b7e628fd881401e68810c1b3589ecd7a41b32b3c287374cde0"
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.es6.d.ts": {
+        "version": "c180f01a2aaac7d733001fa1db20f881dc83cf33096b674a1546ca26762e69da",
+        "signature": "c180f01a2aaac7d733001fa1db20f881dc83cf33096b674a1546ca26762e69da"
       },
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es5.d.ts": {
         "version": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88",
@@ -28,6 +28,10 @@
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.d.ts": {
         "version": "6994c583b66862deca24d7bbf77297d95b9d3da8160dbd9beef6b847cf7c1376",
         "signature": "6994c583b66862deca24d7bbf77297d95b9d3da8160dbd9beef6b847cf7c1376"
+      },
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.iterable.d.ts": {
+        "version": "4c892766803cef795d73d69aee436dc7a80157163e0cf35e6d0e86917cbd42f3",
+        "signature": "4c892766803cef795d73d69aee436dc7a80157163e0cf35e6d0e86917cbd42f3"
       },
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
         "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
@@ -121,25 +125,25 @@
         "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
         "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
       },
-      "/users/katie/devel/bento/types.ts": {
+      "/users/katie/devel/bento/src/types.ts": {
         "version": "b871cfb87e7a2cffa5b3eb301e8ebebf07f8a04b0dd59e12d65cf776d91f219d",
-        "signature": "03225e33c91d2f42898eb891e7f01d6c04e626db7e3179b8757cbbade4faa71a"
+        "signature": "477593366e9d2c980bf0a901a45ecb8fb79a63c1959eb0b89bbe321872e76e9b"
       },
-      "/users/katie/devel/bento/index.ts": {
-        "version": "5864d506be21ada593af0b5f79c3ca1470199a582940a3b9fce596db017fc6d5",
-        "signature": "4a71eb523f41dae1ffe500b1ac378ede8434012ec320f3d96fc251891e06e26e"
-      },
-      "/users/katie/devel/bento/serializers/json.ts": {
+      "/users/katie/devel/bento/src/serializers/json.ts": {
         "version": "06cc084140083fc7ed4fcb40a52995f634e03e0df77cfd8c4b556f0d5613dbc3",
-        "signature": "8c6db9b3e6a72d2e18375f5071c394bf381e0d6f94e2e13c271da6c80af06aaf"
+        "signature": "38a7c4e5abcce0e9000f69a28606050efec3fce2bdfab9094a65994bfe943fd9"
       },
-      "/users/katie/devel/bento/transport.ts": {
+      "/users/katie/devel/bento/src/transport.ts": {
         "version": "d8f4afe1efd391e4835cfce99c26543360fbfa7f2406ca4de56806538ecf4095",
-        "signature": "685a440a5e143f8e91e9a0bd656b7858a49fa81bc7426b8646a409471a993c14"
+        "signature": "195e2ff0746c747f392d91b5dd3a258a7078d2d41c7a5494edffe3ca46eb227d"
       },
-      "/users/katie/devel/bento/index.test.ts": {
+      "/users/katie/devel/bento/src/index.ts": {
+        "version": "c98533b417927bb33636d4bf5ead45127c00aec7900e747d2651bb01c6d57e4a",
+        "signature": "e1df4a6abde58f8650eaca093fd9f399826da927e48520cb411a3921dfb1bb47"
+      },
+      "/users/katie/devel/bento/src/index.test.ts": {
         "version": "fb994892caec5cf4bb7be7e2462e58c9c143ef248610a7d6a0d534f50c31134f",
-        "signature": "bea492423456af0f57b50389702399129143d5814fee068aa7a3737bfe4f170d"
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts": {
         "version": "9aa529882bb6346e49221ffdf45238d45e4aeb5c7723ef1ba367c41fe4045ff8",
@@ -325,6 +329,10 @@
         "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
         "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
       },
+      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts": {
+        "version": "18609e55de22295d8a888d6409fe658d6baa89c5d4fe073651dbdc599519c915",
+        "signature": "18609e55de22295d8a888d6409fe658d6baa89c5d4fe073651dbdc599519c915"
+      },
       "/users/katie/devel/bento/node_modules/@types/minimatch/index.d.ts": {
         "version": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
         "signature": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633"
@@ -333,25 +341,57 @@
         "version": "d852d6282c8dc8156d26d6bda83ab4bde51fee05ba2fe0ecdc165ddda009d3ee",
         "signature": "d852d6282c8dc8156d26d6bda83ab4bde51fee05ba2fe0ecdc165ddda009d3ee"
       },
-      "/users/katie/devel/bento/bin/renderer.ts": {
-        "version": "19c5de979b3c4a656fc8ffb71fbb40096bfb769fa7f493ebacb9cf86219ec9e6",
-        "signature": "604771f5f5b6c98eb861ba74d1ec37bc5eb299bfd32367b5b3006456af54b781"
+      "/users/katie/devel/bento/src/bin/renderer/stringrenderer.ts": {
+        "version": "a5b39a758b2f7132652081b625aeccb7d948c2f4c38caea1be67f5d707b529ef",
+        "signature": "425262570d12d3531427aa79609121de498ace91dd41c7356f84e20bb96d03c7"
       },
-      "/users/katie/devel/bento/test/fake-transport.ts": {
+      "/users/katie/devel/bento/node_modules/camel-case/camel-case.d.ts": {
+        "version": "9c040b92d23fbf0dfdf4343fb13f23422abe7665d4db42e9320acf7bb94cad30",
+        "signature": "9c040b92d23fbf0dfdf4343fb13f23422abe7665d4db42e9320acf7bb94cad30"
+      },
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.ts": {
+        "version": "d0e6757c1f0d4c1b07d8e45d9f270845ad55fd0e3c162c9c93ed97ff253a779e",
+        "signature": "9efbb46f92e22cf658a6f5a763bf425e5bb97b66915faae015647e6bcd02ad4c"
+      },
+      "/users/katie/devel/bento/src/bin/renderer.ts": {
+        "version": "4fb15c74afdc70a96afb997f373076eb4dc803850af0f5eff01f483f92fc754a",
+        "signature": "18d211044c776fda82464d452b97d914b9a34d0a0f225efbf2d47a5633b31300"
+      },
+      "/users/katie/devel/bento/src/bin/renderer.test.ts": {
+        "version": "a4c37153bc518a0ccd4eb8fe887ea2b27781989664cc62d5cea7afc0e4adb4ac",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.test.ts": {
+        "version": "fbc4927047ddcca293c990cc93ec19bb95d70bcfbbc9029b52f488903f370ff8",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/users/katie/devel/bento/src/serializers/json.test.ts": {
+        "version": "739d5d7746cf637e6e3a7fe786c5e30381828ab74fbaf6b2947257efa53300b8",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/users/katie/devel/bento/src/test/fake-transport.ts": {
         "version": "17141e6990042ab055f0e2f779c8e070d4c7fbc9e52ed87626964324ee91602e",
-        "signature": "e596621886e426ac338a96b28a61ef5d52e5aa3620ccf95048246dcfc1ca2409"
+        "signature": "3ff36f97bd83c3ab927eb8448003fa93460f771501688652a4b8a2cb778e6eff"
       },
-      "/users/katie/devel/bento/test/helloworld.mock.ts": {
-        "version": "e36716345512079f5d091842be89954492f6f580c7485da0e2f09facd66d1ef7",
-        "signature": "ae0c0c33e19ace8d469a4aadf988a855552f041a178f7f9ec8ef5f6d3de65b72"
+      "/users/katie/devel/bento/src/test/helloworld.mock.ts": {
+        "version": "a566bcb78fca6277009c0aa380bd616600902c0d62cf8763f1f3682a19191c0c",
+        "signature": "3adc64fc1f380b1a0589af9985121e266fa21d6b160dd8d12832682393462361"
       },
       "/users/katie/devel/bento/node_modules/@types/sinon/ts3.1/index.d.ts": {
         "version": "3fdf5e086de03fc17dd943691526d07bc4d951ec223e4685cac5f21d6533de3e",
         "signature": "3fdf5e086de03fc17dd943691526d07bc4d951ec223e4685cac5f21d6533de3e"
       },
-      "/users/katie/devel/bento/test/helloworld.test.ts": {
-        "version": "5bf894236730b647062623e80df0a3298610240e63d78c3a6fe910de85925b18",
-        "signature": "add72a4130df592e345c644d81ccfdaee0c964549fd400bc091d638eafebfcca"
+      "/users/katie/devel/bento/src/test/helloworld.test.ts": {
+        "version": "0185af29455abc503a9b3e1b0b89471877043c8eabe7988d254bf387f020aa17",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/users/katie/devel/bento/src/test/fixtures/crud.bento.ts": {
+        "version": "cc2629c2b6e81ddca1bd7d8f0d8bf11b53f13fae9638df7e9faba26e77ca8c9f",
+        "signature": "f169580ef2adc09e288fb75119737e502a7251e4f0b62354768ac0e7c4ec19b1"
+      },
+      "/users/katie/devel/bento/src/test/fixtures/helloworld.bento.ts": {
+        "version": "b73a305141f087469ff474b6d02f7fa31ac292ac42010b2ca929a2d173f6b381",
+        "signature": "8a8248c558ef1708adacdec7d0ef8b23b7db5bb6e42d053485f02d1bab94a1a8"
       },
       "/users/katie/devel/bento/node_modules/@babel/types/lib/index.d.ts": {
         "version": "9eac0dd4de5669db2b8321dffa400b997f7b21181118efc7a2c1743d93d4be57",
@@ -377,13 +417,25 @@
         "version": "80e6d098a9998f0523ef6fc423449017dab64c61610c770563617d59bf2902ed",
         "signature": "80e6d098a9998f0523ef6fc423449017dab64c61610c770563617d59bf2902ed"
       },
-      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts": {
-        "version": "a609600956f9652b488fe0cd3687deed05ee276a3d6a76000386add895ec9450",
-        "signature": "a609600956f9652b488fe0cd3687deed05ee276a3d6a76000386add895ec9450"
-      },
       "/users/katie/devel/bento/node_modules/@types/istanbul-lib-coverage/index.d.ts": {
         "version": "2e91ae1a0304062735f5d6f2e0b90d5f5bc11d73291d0a3783c79fd5ad9ac4c7",
         "signature": "2e91ae1a0304062735f5d6f2e0b90d5f5bc11d73291d0a3783c79fd5ad9ac4c7"
+      },
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts": {
+        "version": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd",
+        "signature": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd"
+      },
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/index.d.ts": {
+        "version": "70c61ff569aabdf2b36220da6c06caaa27e45cd7acac81a1966ab4ee2eadc4f2",
+        "signature": "70c61ff569aabdf2b36220da6c06caaa27e45cd7acac81a1966ab4ee2eadc4f2"
+      },
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/node_modules/@types/istanbul-lib-coverage/index.d.ts": {
+        "version": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd",
+        "signature": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd"
+      },
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/index.d.ts": {
+        "version": "93b59bc67329d5add033e3198583c39aa939cef891e6a2b763e0bea2b514ea9b",
+        "signature": "93b59bc67329d5add033e3198583c39aa939cef891e6a2b763e0bea2b514ea9b"
       },
       "/users/katie/devel/bento/node_modules/@types/jest-diff/index.d.ts": {
         "version": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06",
@@ -398,12 +450,16 @@
         "signature": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17"
       },
       "/users/katie/devel/bento/node_modules/@types/jest/index.d.ts": {
-        "version": "a6ea3b29104efd7a3dd497d3496306f8350eb2ab05b7fa1b25fe82f9391bf879",
-        "signature": "a6ea3b29104efd7a3dd497d3496306f8350eb2ab05b7fa1b25fe82f9391bf879"
+        "version": "9ba92686c69056523f61df30af455805d73adadc45c06ed104e7300a35857421",
+        "signature": "9ba92686c69056523f61df30af455805d73adadc45c06ed104e7300a35857421"
       },
       "/users/katie/devel/bento/node_modules/@types/long/index.d.ts": {
         "version": "d32ef7739402db3a15640222d047f0044e8e9a09ee123d49e8f57f3c66c2a732",
         "signature": "d32ef7739402db3a15640222d047f0044e8e9a09ee123d49e8f57f3c66c2a732"
+      },
+      "/users/katie/devel/bento/node_modules/@types/normalize-package-data/index.d.ts": {
+        "version": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613",
+        "signature": "c9ad058b2cc9ce6dc2ed92960d6d009e8c04bef46d3f5312283debca6869f613"
       },
       "/users/katie/devel/bento/node_modules/@types/stack-utils/index.d.ts": {
         "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
@@ -415,12 +471,13 @@
       }
     },
     "options": {
-      "target": 1,
+      "target": 2,
       "module": 1,
       "declaration": true,
-      "declarationMap": true,
-      "sourceMap": true,
+      "outDir": "/Users/katie/Devel/bento/lib",
+      "rootDir": "/Users/katie/Devel/bento/src",
       "incremental": true,
+      "removeComments": false,
       "downlevelIteration": true,
       "strict": true,
       "noImplicitAny": true,
@@ -440,7 +497,7 @@
       "configFilePath": "/Users/katie/Devel/bento/tsconfig.json"
     },
     "referencedMap": {
-      "/users/katie/devel/bento/node_modules/typescript/lib/lib.d.ts": [
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.es6.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -465,6 +522,10 @@
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -560,30 +621,32 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/types.ts": [
+      "/users/katie/devel/bento/src/types.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/index.ts": [
-        "/users/katie/devel/bento/types.ts",
+      "/users/katie/devel/bento/src/serializers/json.ts": [
+        "/users/katie/devel/bento/src/types.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/serializers/json.ts": [
-        "/users/katie/devel/bento/types.ts",
+      "/users/katie/devel/bento/src/transport.ts": [
+        "/users/katie/devel/bento/src/types.ts",
+        "/users/katie/devel/bento/src/index.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/transport.ts": [
-        "/users/katie/devel/bento/types.ts",
-        "/users/katie/devel/bento/index.ts",
+      "/users/katie/devel/bento/src/index.ts": [
+        "/users/katie/devel/bento/src/types.ts",
+        "/users/katie/devel/bento/src/serializers/json.ts",
+        "/users/katie/devel/bento/src/transport.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/index.test.ts": [
-        "/users/katie/devel/bento/index.ts",
-        "/users/katie/devel/bento/serializers/json.ts",
-        "/users/katie/devel/bento/transport.ts",
+      "/users/katie/devel/bento/src/index.test.ts": [
+        "/users/katie/devel/bento/src/index.ts",
+        "/users/katie/devel/bento/src/serializers/json.ts",
+        "/users/katie/devel/bento/src/transport.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -861,6 +924,12 @@
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/globals.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts"
       ],
+      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/fs.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/katie/devel/bento/node_modules/@types/minimatch/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
@@ -872,20 +941,60 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/bin/renderer.ts": [
+      "/users/katie/devel/bento/src/bin/renderer/stringrenderer.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/camel-case/camel-case.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.ts": [
         "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts",
+        "/users/katie/devel/bento/src/bin/renderer/stringrenderer.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/child_process.d.ts",
+        "/users/katie/devel/bento/node_modules/camel-case/camel-case.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/bin/renderer.ts": [
+        "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/path.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts",
         "/users/katie/devel/bento/node_modules/@types/glob/index.d.ts",
+        "/users/katie/devel/bento/src/bin/renderer/ts-output.ts",
+        "/users/katie/devel/bento/src/bin/renderer/stringrenderer.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/test/fake-transport.ts": [
-        "/users/katie/devel/bento/transport.ts",
-        "/users/katie/devel/bento/index.ts",
+      "/users/katie/devel/bento/src/bin/renderer.test.ts": [
+        "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts",
+        "/users/katie/devel/bento/src/bin/renderer.ts",
+        "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/path.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/test/helloworld.mock.ts": [
-        "/users/katie/devel/bento/index.ts",
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.test.ts": [
+        "/users/katie/devel/bento/src/bin/renderer/ts-output.ts",
+        "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/serializers/json.test.ts": [
+        "/users/katie/devel/bento/src/serializers/json.ts",
+        "/users/katie/devel/bento/src/types.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/test/fake-transport.ts": [
+        "/users/katie/devel/bento/src/transport.ts",
+        "/users/katie/devel/bento/src/index.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/test/helloworld.mock.ts": [
+        "/users/katie/devel/bento/src/index.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -893,12 +1002,22 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/test/helloworld.test.ts": [
-        "/users/katie/devel/bento/index.ts",
-        "/users/katie/devel/bento/test/helloworld.mock.ts",
+      "/users/katie/devel/bento/src/test/helloworld.test.ts": [
+        "/users/katie/devel/bento/src/index.ts",
+        "/users/katie/devel/bento/src/test/helloworld.mock.ts",
         "/users/katie/devel/bento/node_modules/@types/sinon/ts3.1/index.d.ts",
-        "/users/katie/devel/bento/serializers/json.ts",
-        "/users/katie/devel/bento/test/fake-transport.ts",
+        "/users/katie/devel/bento/src/serializers/json.ts",
+        "/users/katie/devel/bento/src/test/fake-transport.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/test/fixtures/crud.bento.ts": [
+        "/users/katie/devel/bento/src/index.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/test/fixtures/helloworld.bento.ts": [
+        "/users/katie/devel/bento/src/index.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -936,13 +1055,26 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts": [
-        "/users/katie/devel/bento/node_modules/@types/node/fs.d.ts",
-        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -966,6 +1098,10 @@
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/katie/devel/bento/node_modules/@types/long/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/normalize-package-data/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -979,7 +1115,7 @@
       ]
     },
     "exportedModulesMap": {
-      "/users/katie/devel/bento/node_modules/typescript/lib/lib.d.ts": [
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.es6.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1004,6 +1140,10 @@
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1098,6 +1238,18 @@
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/serializers/json.ts": [
+        "/users/katie/devel/bento/src/types.ts"
+      ],
+      "/users/katie/devel/bento/src/transport.ts": [
+        "/users/katie/devel/bento/src/types.ts",
+        "/users/katie/devel/bento/src/index.ts"
+      ],
+      "/users/katie/devel/bento/src/index.ts": [
+        "/users/katie/devel/bento/src/types.ts",
+        "/users/katie/devel/bento/src/serializers/json.ts",
+        "/users/katie/devel/bento/src/transport.ts"
       ],
       "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
@@ -1373,6 +1525,12 @@
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/globals.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts"
       ],
+      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/fs.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/katie/devel/bento/node_modules/@types/minimatch/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
@@ -1384,9 +1542,32 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/users/katie/devel/bento/node_modules/camel-case/camel-case.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.ts": [
+        "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts"
+      ],
+      "/users/katie/devel/bento/src/bin/renderer.ts": [
+        "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts"
+      ],
+      "/users/katie/devel/bento/src/test/fake-transport.ts": [
+        "/users/katie/devel/bento/src/transport.ts",
+        "/users/katie/devel/bento/src/index.ts"
+      ],
+      "/users/katie/devel/bento/src/test/helloworld.mock.ts": [
+        "/users/katie/devel/bento/src/index.ts"
+      ],
       "/users/katie/devel/bento/node_modules/@types/sinon/ts3.1/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/src/test/fixtures/crud.bento.ts": [
+        "/users/katie/devel/bento/src/index.ts"
+      ],
+      "/users/katie/devel/bento/src/test/fixtures/helloworld.bento.ts": [
+        "/users/katie/devel/bento/src/index.ts"
       ],
       "/users/katie/devel/bento/node_modules/@babel/types/lib/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
@@ -1422,13 +1603,26 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts": [
-        "/users/katie/devel/bento/node_modules/@types/node/fs.d.ts",
-        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/index.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1455,6 +1649,10 @@
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/users/katie/devel/bento/node_modules/@types/normalize-package-data/index.d.ts": [
+        "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
+        "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/katie/devel/bento/node_modules/@types/stack-utils/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
@@ -1462,33 +1660,17 @@
       "/users/katie/devel/bento/node_modules/@types/yargs/index.d.ts": [
         "/users/katie/devel/bento/node_modules/@types/node/util.d.ts",
         "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/katie/devel/bento/transport.ts": [
-        "/users/katie/devel/bento/index.ts",
-        "/users/katie/devel/bento/types.ts"
-      ],
-      "/users/katie/devel/bento/test/fake-transport.ts": [
-        "/users/katie/devel/bento/transport.ts",
-        "/users/katie/devel/bento/index.ts"
-      ],
-      "/users/katie/devel/bento/serializers/json.ts": [
-        "/users/katie/devel/bento/types.ts"
-      ],
-      "/users/katie/devel/bento/index.ts": [
-        "/users/katie/devel/bento/types.ts"
-      ],
-      "/users/katie/devel/bento/test/helloworld.mock.ts": [
-        "/users/katie/devel/bento/index.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
-      "/users/katie/devel/bento/node_modules/typescript/lib/lib.d.ts",
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.es6.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es5.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es2015.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es2016.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es2017.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es2018.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.d.ts",
+      "/users/katie/devel/bento/node_modules/typescript/lib/lib.dom.iterable.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.scripthost.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es2015.core.d.ts",
@@ -1512,6 +1694,11 @@
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "/users/katie/devel/bento/src/types.ts",
+      "/users/katie/devel/bento/src/serializers/json.ts",
+      "/users/katie/devel/bento/src/transport.ts",
+      "/users/katie/devel/bento/src/index.ts",
+      "/users/katie/devel/bento/src/index.test.ts",
       "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/node/globals.d.ts",
       "/users/katie/devel/bento/node_modules/@types/node/assert.d.ts",
@@ -1558,34 +1745,42 @@
       "/users/katie/devel/bento/node_modules/@types/node/ts3.2/util.d.ts",
       "/users/katie/devel/bento/node_modules/@types/node/ts3.2/globals.d.ts",
       "/users/katie/devel/bento/node_modules/@types/node/ts3.2/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/minimatch/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/glob/index.d.ts",
+      "/users/katie/devel/bento/src/bin/renderer/stringrenderer.ts",
+      "/users/katie/devel/bento/node_modules/camel-case/camel-case.d.ts",
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.ts",
+      "/users/katie/devel/bento/src/bin/renderer.ts",
+      "/users/katie/devel/bento/src/bin/renderer.test.ts",
+      "/users/katie/devel/bento/src/bin/renderer/ts-output.test.ts",
+      "/users/katie/devel/bento/src/serializers/json.test.ts",
+      "/users/katie/devel/bento/src/test/fake-transport.ts",
+      "/users/katie/devel/bento/src/test/helloworld.mock.ts",
       "/users/katie/devel/bento/node_modules/@types/sinon/ts3.1/index.d.ts",
+      "/users/katie/devel/bento/src/test/helloworld.test.ts",
+      "/users/katie/devel/bento/src/test/fixtures/crud.bento.ts",
+      "/users/katie/devel/bento/src/test/fixtures/helloworld.bento.ts",
       "/users/katie/devel/bento/node_modules/@babel/types/lib/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/babel__generator/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/babel__traverse/index.d.ts",
       "/users/katie/devel/bento/node_modules/@babel/parser/typings/babel-parser.d.ts",
       "/users/katie/devel/bento/node_modules/@types/babel__template/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/babel__core/index.d.ts",
-      "/users/katie/devel/bento/node_modules/@types/fs-extra/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/istanbul-lib-report/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/istanbul-reports/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/jest-diff/index.d.ts",
       "/users/katie/devel/bento/node_modules/jest-diff/build/types.d.ts",
       "/users/katie/devel/bento/node_modules/jest-diff/build/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/jest/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/long/index.d.ts",
+      "/users/katie/devel/bento/node_modules/@types/normalize-package-data/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/stack-utils/index.d.ts",
-      "/users/katie/devel/bento/node_modules/@types/yargs/index.d.ts",
-      "/users/katie/devel/bento/types.ts",
-      "/users/katie/devel/bento/index.ts",
-      "/users/katie/devel/bento/serializers/json.ts",
-      "/users/katie/devel/bento/transport.ts",
-      "/users/katie/devel/bento/index.test.ts",
-      "/users/katie/devel/bento/bin/renderer.ts",
-      "/users/katie/devel/bento/test/fake-transport.ts",
-      "/users/katie/devel/bento/test/helloworld.mock.ts",
-      "/users/katie/devel/bento/test/helloworld.test.ts"
+      "/users/katie/devel/bento/node_modules/@types/yargs/index.d.ts"
     ]
   },
-  "version": "3.4.4"
+  "version": "3.4.5"
 }

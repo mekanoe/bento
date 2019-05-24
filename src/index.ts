@@ -33,6 +33,11 @@ export default class Bento {
   public transport?: IBentoTransport
   private serviceRegistry: Map<string, any> = new Map()
 
+  /**
+   * makes this bento instance able to respond to a service definition's rpcs.
+   * @param name service name
+   * @param impl service implmentation
+   */
   service<T> (name: string | (() => string), impl: Service<T>) {
     if (typeof name === 'function') {
       name = name()
@@ -42,6 +47,10 @@ export default class Bento {
     this.serviceRegistry.set(name, service)
   }
 
+  /**
+   * adds a default transport
+   * @param tt default transport instance
+   */
   addTransport (tt: Transport): IBentoTransport {
     const t = new tt(this)
     if (this.transport === undefined) {
@@ -51,10 +60,22 @@ export default class Bento {
     return t
   }
 
+  /**
+   * creates a client
+   * @param impl client class implementation
+   * @param tt optional transport for sending data
+   */
   client<T> (impl: Client<T>, tt?: IBentoTransport): T {
     return new impl(this, tt)
   }
 
+  /**
+   * make a request over supplied or default transport
+   * @param transport optional transport
+   * @param service service name
+   * @param fn rpc function name
+   * @param input input data
+   */
   async makeRequest<I, O> (transport: IBentoTransport | undefined, service: string, fn: string, input: I): Promise<O> {
     if (transport === undefined) {
       transport = this.transport
@@ -86,7 +107,11 @@ export default class Bento {
     return resp.response
   }
 
-  async recieveRequest<I, O, C> (buf: BufferWithCtx<C>): Promise<Buffer> {
+  /**
+   * recieve a request from a client
+   * @param buf buffer with contextual data attached (e.g. an http handler like koa)
+   */
+  async receiveRequest<I, O, C> (buf: BufferWithCtx<C>): Promise<Buffer> {
     const req: BentoRequestData<I, C> = this.serializer.deserializeRequest(buf)
 
     try {
