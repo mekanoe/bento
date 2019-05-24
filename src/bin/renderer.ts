@@ -56,10 +56,13 @@ export const prepRender = (filePath: string, root: pbjs.Root): RenderData => {
     types: [],
     services: []
   }
+
+  console.log({ root })
+
   for (const obj of root.nestedArray) {
-    if (!filePath.includes(obj.filename || '')) {
-      continue
-    }
+    // if (!filePath.includes(obj.filename || '')) {
+    //   continue
+    // }
 
     if (obj instanceof pbjs.Type) {
       // console.log('got type', obj.name)

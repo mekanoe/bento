@@ -44,8 +44,8 @@
   },
   "lint-staged": {
     "*.ts": [
-      "tslint -p --fix",
-      "jest --bail --findRelevantTests",
+      "tslint --fix",
+      "jest --bail --findRelatedTests",
       "git add"
     ]
   }

@@ -15,6 +15,8 @@ export const resolveJSType = (t: string) => {
   switch (t) {
     case 'bool': return 'boolean'
     case 'float': return 'number'
+    case 'int32': return 'number'
+    case 'int64': return 'number'
   }
 
   return t
