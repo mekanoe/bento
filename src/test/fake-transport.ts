@@ -1,5 +1,5 @@
 import Transport from '../transport'
-import Bento from '..'
+import Bento, { JSONSerializer } from '..'
 
 const evt: {
   _snd?: InMemoryTransport,
@@ -11,7 +11,7 @@ const evt: {
       throw new Error('oops')
     }
 
-    return evt._rcv.reciever({ buffer: data, ctx: { env: 'testing' } })
+    return evt._rcv.receiver({ buffer: data, ctx: { env: 'testing' } })
   }
 }
 
@@ -22,11 +22,11 @@ export class InMemoryTransport extends Transport {
 }
 
 export const createClient = (b: Bento) => {
-  evt._snd = new InMemoryTransport(b)
+  evt._snd = new InMemoryTransport(b, new JSONSerializer())
   return evt._snd
 }
 
 export const createServer = (b: Bento) => {
-  evt._rcv = new InMemoryTransport(b)
+  evt._rcv = new InMemoryTransport(b, new JSONSerializer())
   return evt._rcv
 }

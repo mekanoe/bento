@@ -19,6 +19,7 @@ export const resolveJSType = (t: string) => {
 
   return t
 }
+
 export const renderType = (t: pbjs.Type): string => {
   const { r, data } = new StringRenderer()
 

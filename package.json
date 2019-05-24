@@ -1,6 +1,6 @@
 {
   "name": "@kayteh/bento",
-  "version": "0.0.0-alpha.2",
+  "version": "0.1.0",
   "repository": "https://github.com/kayteh/bento",
   "license": "MIT",
   "main": "lib/index.js",
@@ -38,7 +38,9 @@
     "bentoc": "./lib/bin/renderer.js"
   },
   "husky": {
-    "pre-commit": "lint-staged"
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.ts": [

@@ -15,7 +15,7 @@ minimum goals for this project. none of these are requirements for your implemen
 
 - **wire format targets**
   - [x] JSON
-  - [ ] protobuf
+  - [ ] ~~protobuf~~ (*code/transport complexity makes this not worth it*)
 
 - **generation habits**
   - [ ] on-the-fly codegen for development (e.g. does it without asking)

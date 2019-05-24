@@ -1,9 +1,9 @@
-import { BufferWithCtx, IBentoTransport } from './types'
-import Bento from '.'
+import Bento, { BufferWithCtx, IBentoTransport, IBentoSerializer } from '.'
 
 export default class Transport implements IBentoTransport {
   constructor (
-    private bento: Bento
+    private bento: Bento,
+    public serializer: IBentoSerializer
   ) {}
 
   /**
@@ -20,6 +20,6 @@ export default class Transport implements IBentoTransport {
    * Receiver takes in a buffer with ctx, and replies with a response.
    */
   receiver<C> (data: BufferWithCtx<C>): Promise<Buffer> {
-    return this.bento.receiveRequest(data)
+    return this.bento.receiveRequest(data, this.serializer)
   }
 }

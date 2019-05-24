@@ -1,7 +1,7 @@
 import Bento from '../index'
 import * as HelloWorldTest from './helloworld.mock'
 import sinon from 'sinon'
-import JSONSerializer from '../serializers/json'
+// import JSONSerializer from '../serializers/json'
 // import Transport from '../src/transport'
 import { createServer, createClient } from './fake-transport'
 
@@ -25,20 +25,16 @@ describe('HelloWorld mockup service', () => {
   // - server responds over it's ITransport
   // - client deserializes response
   // - client promise resolves
-  const bentoServer = new Bento(
-    new JSONSerializer({ verbose: true })
-  )
+  const bentoServer = new Bento()
   bentoServer.service(HelloWorldTest.default, TestHWServer)
   const ttServer = createServer(bentoServer)
   sinon.spy(ttServer, 'sender')
-  sinon.spy(ttServer, 'reciever')
+  sinon.spy(ttServer, 'receiver')
 
-  const bentoClient = new Bento(
-    new JSONSerializer({ verbose: true })
-  )
+  const bentoClient = new Bento()
   const ttClient = createClient(bentoClient)
   sinon.spy(ttClient, 'sender')
-  sinon.spy(ttClient, 'reciever')
+  sinon.spy(ttClient, 'receiver')
 
   const client = bentoClient.client(HelloWorldTest.HelloWorldClient, ttClient)
   it('resolves its own RPCs', async () => {
@@ -51,13 +47,13 @@ describe('HelloWorld mockup service', () => {
     })
 
     expect((ttServer.sender as any).called).toBe(false)
-    expect((ttServer.reciever as any).called).toBe(false)
+    expect((ttServer.receiver as any).called).toBe(false)
   })
 
   it('utilizes client transports', async () => {
     const result = await client.sayHello({ name: 'world2' })
     expect(result.message).toStrictEqual('hello world2!')
-    expect((ttServer.reciever as any).called).toBe(true)
+    expect((ttServer.receiver as any).called).toBe(true)
     expect((ttClient.sender as any).called).toBe(true)
   })
 })

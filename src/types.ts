@@ -19,6 +19,8 @@ export type BufferWithCtx<C> = {
 }
 
 export interface IBentoTransport {
+  serializer: IBentoSerializer
+
   /**
    * sender will be called by Bento when data is
    * ready to be sent out.

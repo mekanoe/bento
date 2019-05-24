@@ -17,7 +17,7 @@ type Constructor<T> = {
 }
 
 // type Serializer = Constructor<IBentoSerializer>
-type Transport = Constructor<IBentoTransport>
+// type Transport = Constructor<IBentoTransport>
 
 type Client<T> = {
   new(b: Bento, tt?: IBentoTransport): T
@@ -26,10 +26,6 @@ type Client<T> = {
 type Service<T> = Constructor<T>
 
 export default class Bento {
-  constructor (
-    private serializer: IBentoSerializer
-  ) {}
-
   public transport?: IBentoTransport
   private serviceRegistry: Map<string, any> = new Map()
 
@@ -45,19 +41,6 @@ export default class Bento {
 
     const service = new impl(this)
     this.serviceRegistry.set(name, service)
-  }
-
-  /**
-   * adds a default transport
-   * @param tt default transport instance
-   */
-  addTransport (tt: Transport): IBentoTransport {
-    const t = new tt(this)
-    if (this.transport === undefined) {
-      this.transport = t
-    }
-
-    return t
   }
 
   /**
@@ -90,7 +73,7 @@ export default class Bento {
     }
 
     // serialize
-    const reqBuf: Buffer = this.serializer.serialize({
+    const reqBuf: Buffer = transport.serializer.serialize({
       service,
       fn,
       input
@@ -98,7 +81,7 @@ export default class Bento {
     // trigger transport output, await
     const respBuf = await transport.sender(reqBuf)
     // deserialize
-    const resp: BentoResponseData<O> = this.serializer.deserialize(respBuf)
+    const resp: BentoResponseData<O> = transport.serializer.deserialize(respBuf)
 
     if (resp.error === true) {
       throw new Error(resp.errorMsg)
@@ -111,17 +94,17 @@ export default class Bento {
    * recieve a request from a client
    * @param buf buffer with contextual data attached (e.g. an http handler like koa)
    */
-  async receiveRequest<I, O, C> (buf: BufferWithCtx<C>): Promise<Buffer> {
-    const req: BentoRequestData<I, C> = this.serializer.deserializeRequest(buf)
+  async receiveRequest<I, O, C> (buf: BufferWithCtx<C>, serializer: IBentoSerializer): Promise<Buffer> {
+    const req: BentoRequestData<I, C> = serializer.deserializeRequest(buf)
 
     try {
       const respData = await this.call<I, O, C>(req)
-      const respBuf: Buffer = this.serializer.serialize({
+      const respBuf: Buffer = serializer.serialize({
         response: respData
       })
       return respBuf
     } catch (e) {
-      const respBuf: Buffer = this.serializer.serialize({
+      const respBuf: Buffer = serializer.serialize({
         error: true,
         errorMsg: e
       })
@@ -154,5 +137,6 @@ export default class Bento {
 export { IBentoTransport,
   IBentoSerializer,
   BentoRequestData,
-  BentoResponseData
+  BentoResponseData,
+  BufferWithCtx
 }
