@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { IBentoTransport, IBentoSerializer, BentoRequestData, BentoResponseData, BufferWithCtx } from './types';
 export { default as JSONSerializer } from './serializers/json';
 export { default as Transport } from './transport';
@@ -37,7 +36,7 @@ export default class Bento {
      * recieve a request from a client
      * @param buf buffer with contextual data attached (e.g. an http handler like koa)
      */
-    receiveRequest<I, O, C>(buf: BufferWithCtx<C>, serializer: IBentoSerializer): Promise<Buffer>;
+    receiveRequest<I, O, C>(buf: BufferWithCtx<C>, serializer: IBentoSerializer): Promise<ArrayBuffer>;
     call<I, O, C>(req: BentoRequestData<I, C>): Promise<O>;
 }
 export { IBentoTransport, IBentoSerializer, BentoRequestData, BentoResponseData, BufferWithCtx };

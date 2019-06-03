@@ -4,9 +4,9 @@ import Bento, { JSONSerializer } from '..'
 const evt: {
   _snd?: InMemoryTransport,
   _rcv?: InMemoryTransport,
-  send: (data: Buffer) => Promise<Buffer>
+  send: (data: ArrayBuffer) => Promise<ArrayBuffer>
 } = {
-  send: (data: Buffer) => {
+  send: (data: ArrayBuffer) => {
     if (evt._rcv === undefined) {
       throw new Error('oops')
     }
@@ -16,7 +16,7 @@ const evt: {
 }
 
 export class InMemoryTransport extends Transport {
-  sender (data: Buffer): Promise<Buffer> {
+  sender (data: ArrayBuffer): Promise<ArrayBuffer> {
     return evt.send(data)
   }
 }

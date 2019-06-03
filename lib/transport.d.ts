@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import Bento, { BufferWithCtx, IBentoTransport, IBentoSerializer } from '.';
 export default class Transport implements IBentoTransport {
     protected bento: Bento;
@@ -7,12 +6,12 @@ export default class Transport implements IBentoTransport {
     /**
      * Sender takes in a buffer, and waits for a response.
      */
-    sender(data: Buffer, _: {
+    sender(data: ArrayBuffer, _: {
         service: string;
         fn: string;
-    }): Promise<Buffer>;
+    }): Promise<ArrayBuffer>;
     /**
      * Receiver takes in a buffer with ctx, and replies with a response.
      */
-    receiver<C>(data: BufferWithCtx<C>): Promise<Buffer>;
+    receiver<C>(data: BufferWithCtx<C>): Promise<ArrayBuffer>;
 }
