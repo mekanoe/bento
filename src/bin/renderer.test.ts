@@ -1,5 +1,5 @@
 import pbjs from 'protobufjs'
-import { prepRender, render, writeOut } from './renderer'
+import { prepRender, render, writeOut, shouldExclude } from './renderer'
 import fs from 'fs-extra'
 import path from 'path'
 
@@ -19,6 +19,16 @@ message HelloWorld {
 message ExcludeMe {
   option render.exclude = true;
 }`)
+
+const excludeFixture = pbjs.parse(`
+syntax = "proto3";
+
+option render.exclude = true;
+
+message IShouldntExist {
+  string omg = 1;
+}
+`)
 
 describe('Renderer', () => {
 
@@ -63,5 +73,10 @@ describe('Renderer', () => {
 
     await fs.remove(outPath)
     await fs.rmdir(tmpdir)
+  })
+
+  it('skips processing of an excluded render root', () => {
+    expect(shouldExclude(excludeFixture.root)).toBe(true)
+    expect(shouldExclude(_.root)).toBe(false)
   })
 })

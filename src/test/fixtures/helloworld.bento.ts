@@ -11,6 +11,10 @@ export type HelloReply = {
   message?: string
 }
 
+export type SecurityOpts = {
+  authed?: boolean
+}
+
 export interface IHelloWorldService {
   sayHello (ctx: any, request: HelloRequest): Promise<HelloReply> | HelloReply
 }

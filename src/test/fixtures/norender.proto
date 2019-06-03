@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+option render.exclude = true;
+
+service BadService {
+  rpc Stuff (Omega) returns (Lul) {};
+}

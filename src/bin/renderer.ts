@@ -12,6 +12,14 @@ const BENTO_LOC = process.env.BENTO_LOC || '@kayteh/bento'
 
 // console.log({ cwd: process.cwd() })
 
+export const shouldExclude = (t: pbjs.Root | pbjs.Type): boolean => {
+  return (
+    t.options !== undefined &&
+    'render.exclude' in t.options &&
+    t.options['render.exclude'] === true
+  )
+}
+
 type RenderData = {
   filePath: string
   types: pbjs.Type[]
@@ -66,7 +74,7 @@ export const prepRender = (filePath: string, root: pbjs.Root): RenderData => {
 
     if (obj instanceof pbjs.Type) {
       // console.log('got type', obj.name)
-      if (obj.options !== undefined && obj.options['render.exclude'] === true) {
+      if (shouldExclude(obj)) {
         continue
       }
 
@@ -129,9 +137,9 @@ const injectResolvePath = (root: pbjs.Root, paths: string[]) => {
   }
 }
 
-const processFile = async (fileName: string) => {
+const processFile = async (fileName: string): Promise<boolean> => {
   if (fileName.includes('node_modules')) {
-    return
+    return false
   }
 
   const root = new pbjs.Root()
@@ -141,6 +149,11 @@ const processFile = async (fileName: string) => {
   ]
   injectResolvePath(root, paths)
   const f = await root.load(fileName)
+
+  // has exclusion?
+  if (shouldExclude(f)) {
+    return false
+  }
 
   const rd: RenderData = prepRender(fileName, f)
   const rendered = render(rd)
@@ -154,6 +167,8 @@ const processFile = async (fileName: string) => {
   console.log(`-- Found RPCs: ${rd.services.map(v => v.name).join(', ')}`)
   console.log(`-- Found types: ${rd.types.map(v => v.name).join(', ')}`)
   console.log('')
+
+  return true
 }
 
 export const run = async (globPaths: string[]) => {
