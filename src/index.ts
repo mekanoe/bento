@@ -5,6 +5,7 @@ import {
   BentoResponseData,
   BufferWithCtx
 } from './types'
+import camelCase from 'camel-case'
 
 export { default as JSONSerializer } from './serializers/json'
 export { default as Transport } from './transport'
@@ -121,7 +122,7 @@ export default class Bento {
     const svc: { [x: string]: (ctx: BentoCtx<C>, input: I) => Promise<O> }
       = this.serviceRegistry.get(service)
 
-    if (!(fn in svc)) {
+    if (!(camelCase(fn) in svc)) {
       throw new Error(`Bento: service name ${service} doesn't include a ${fn} handler.`)
     }
 
