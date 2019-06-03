@@ -134,8 +134,8 @@
         "signature": "38a7c4e5abcce0e9000f69a28606050efec3fce2bdfab9094a65994bfe943fd9"
       },
       "/users/katie/devel/bento/src/transport.ts": {
-        "version": "318b76fc08acddf0f596ab9d63cdbd24b747c0dbfa0853b8cf7621b5fdba5c76",
-        "signature": "bcc11532cd29c90278cdd03f2de8a70f4faff35eeeb4fd602860bf8ed362a8ce"
+        "version": "26faa05847119a8509c17f9d3a52b818b70ef205e6992e07f198ddf599446e29",
+        "signature": "127c96b16439ae25da5555d26d6a5f9068a240eb93d124c66e09378bcc65d3e4"
       },
       "/users/katie/devel/bento/src/index.ts": {
         "version": "3f206adadebf71159fc22a3ece4a90376bfc482a9dc40c9a986b55981914526e",
@@ -1692,9 +1692,6 @@
       "/users/katie/devel/bento/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "/users/katie/devel/bento/src/types.ts",
       "/users/katie/devel/bento/src/serializers/json.ts",
-      "/users/katie/devel/bento/src/transport.ts",
-      "/users/katie/devel/bento/src/index.ts",
-      "/users/katie/devel/bento/src/index.test.ts",
       "/users/katie/devel/bento/node_modules/protobufjs/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/node/globals.d.ts",
       "/users/katie/devel/bento/node_modules/@types/node/assert.d.ts",
@@ -1751,12 +1748,7 @@
       "/users/katie/devel/bento/src/bin/renderer.test.ts",
       "/users/katie/devel/bento/src/bin/renderer/ts-output.test.ts",
       "/users/katie/devel/bento/src/serializers/json.test.ts",
-      "/users/katie/devel/bento/src/test/fake-transport.ts",
-      "/users/katie/devel/bento/src/test/helloworld.mock.ts",
       "/users/katie/devel/bento/node_modules/@types/sinon/ts3.1/index.d.ts",
-      "/users/katie/devel/bento/src/test/helloworld.test.ts",
-      "/users/katie/devel/bento/src/test/fixtures/crud.bento.ts",
-      "/users/katie/devel/bento/src/test/fixtures/helloworld.bento.ts",
       "/users/katie/devel/bento/node_modules/@babel/types/lib/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/babel__generator/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/babel__traverse/index.d.ts",
@@ -1775,7 +1767,15 @@
       "/users/katie/devel/bento/node_modules/@types/long/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/normalize-package-data/index.d.ts",
       "/users/katie/devel/bento/node_modules/@types/stack-utils/index.d.ts",
-      "/users/katie/devel/bento/node_modules/@types/yargs/index.d.ts"
+      "/users/katie/devel/bento/node_modules/@types/yargs/index.d.ts",
+      "/users/katie/devel/bento/src/transport.ts",
+      "/users/katie/devel/bento/src/index.ts",
+      "/users/katie/devel/bento/src/index.test.ts",
+      "/users/katie/devel/bento/src/test/fake-transport.ts",
+      "/users/katie/devel/bento/src/test/helloworld.mock.ts",
+      "/users/katie/devel/bento/src/test/helloworld.test.ts",
+      "/users/katie/devel/bento/src/test/fixtures/crud.bento.ts",
+      "/users/katie/devel/bento/src/test/fixtures/helloworld.bento.ts"
     ]
   },
   "version": "3.5.1"

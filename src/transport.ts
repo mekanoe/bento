@@ -2,7 +2,7 @@ import Bento, { BufferWithCtx, IBentoTransport, IBentoSerializer } from '.'
 
 export default class Transport implements IBentoTransport {
   constructor (
-    private bento: Bento,
+    protected bento: Bento,
     public serializer: IBentoSerializer
   ) {}
 
