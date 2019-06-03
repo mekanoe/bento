@@ -114,15 +114,16 @@ export default class Bento {
   }
 
   call<I, O, C> (req: BentoRequestData<I, C>): Promise<O> {
-    const { service, fn, input, ctx } = req
+    const { service, input, ctx } = req
     if (!this.serviceRegistry.has(service)) {
       throw new Error(`Bento: service name ${service} not registered.`)
     }
 
     const svc: { [x: string]: (ctx: BentoCtx<C>, input: I) => Promise<O> }
-      = this.serviceRegistry.get(service)
+    = this.serviceRegistry.get(service)
 
-    if (!(camelCase(fn) in svc)) {
+    const fn = camelCase(req.fn)
+    if (!(fn in svc)) {
       throw new Error(`Bento: service name ${service} doesn't include a ${fn} handler.`)
     }
 

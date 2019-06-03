@@ -21,7 +21,7 @@ export class HelloWorldClient {
 
   async sayHello (request: HelloRequest): Promise<HelloReply> {
     // tell bento to make the request
-    return this.bento.makeRequest(this.transport || undefined, 'HelloWorld', 'sayHello', request)
+    return this.bento.makeRequest(this.transport || undefined, 'HelloWorld', 'SayHello', request)
   }
 }
 
