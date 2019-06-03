@@ -137,8 +137,22 @@ const injectResolvePath = (root: pbjs.Root, paths: string[]) => {
   }
 }
 
-const processFile = async (fileName: string): Promise<boolean> => {
+export const shouldExcludeFile = (fileName: string): boolean => {
+  // read file
+  const b = fs.readFileSync(fileName, { encoding: 'utf-8' })
+
+  // look for // @bento-exclude, optionally without leading space
+  return b.match(/^\/\/ ?@bento-exclude/gm) !== null
+}
+
+export const processFile = async (fileName: string): Promise<boolean> => {
   if (fileName.includes('node_modules')) {
+    return false
+  }
+
+  // has exclusion?
+  if (shouldExcludeFile(fileName)) {
+    console.log('Skipped', fileName)
     return false
   }
 
@@ -149,11 +163,6 @@ const processFile = async (fileName: string): Promise<boolean> => {
   ]
   injectResolvePath(root, paths)
   const f = await root.load(fileName)
-
-  // has exclusion?
-  if (shouldExclude(f)) {
-    return false
-  }
 
   const rd: RenderData = prepRender(fileName, f)
   const rendered = render(rd)

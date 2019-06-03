@@ -25,3 +25,14 @@ export class HelloWorldClient {
     return this.bento.makeRequest(this.transport || undefined, 'HelloWorld', 'SayHello', request)
   }
 }
+
+export interface IBadServiceService {
+  stuff (ctx: any, request: boolean): Promise<boolean> | boolean
+}
+export class BadServiceClient {
+  static __SERVICE__: string = 'BadService'
+  constructor (private bento: Bento, private transport?: IBentoTransport) {}
+  async stuff (request: boolean): Promise<boolean> {
+    return this.bento.makeRequest(this.transport || undefined, 'BadService', 'Stuff', request)
+  }
+}

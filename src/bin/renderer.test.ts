@@ -1,5 +1,5 @@
 import pbjs from 'protobufjs'
-import { prepRender, render, writeOut, shouldExclude } from './renderer'
+import { prepRender, render, writeOut, shouldExclude, shouldExcludeFile } from './renderer'
 import fs from 'fs-extra'
 import path from 'path'
 
@@ -78,5 +78,10 @@ describe('Renderer', () => {
   it('skips processing of an excluded render root', () => {
     expect(shouldExclude(excludeFixture.root)).toBe(true)
     expect(shouldExclude(_.root)).toBe(false)
+  })
+
+  it('skips a file based on @bento-exclude comment', () => {
+    const file = path.relative(process.cwd(), path.join(__dirname, '../test/fixtures/norender.proto'))
+    expect(shouldExcludeFile(file)).toBe(true)
   })
 })

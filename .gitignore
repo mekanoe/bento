@@ -3,4 +3,5 @@ dist
 */__generated__
 .vscode
 .vs
-*.logtsconfig.tsbuildinfo
+*.log
+tsconfig.tsbuildinfo
