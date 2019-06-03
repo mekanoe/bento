@@ -7,7 +7,10 @@ export default class Transport implements IBentoTransport {
     /**
      * Sender takes in a buffer, and waits for a response.
      */
-  sender (data: Buffer): Promise<Buffer>
+  sender (data: Buffer, _: {
+      service: string;
+      fn: string;
+    }): Promise<Buffer>
     /**
      * Receiver takes in a buffer with ctx, and replies with a response.
      */

@@ -27,7 +27,7 @@ type Service<T> = Constructor<T>
 
 export default class Bento {
   public transport?: IBentoTransport
-  private serviceRegistry: Map<string, any> = new Map()
+  public serviceRegistry: Map<string, any> = new Map()
 
   /**
    * makes this bento instance able to respond to a service definition's rpcs.
@@ -79,7 +79,7 @@ export default class Bento {
       input
     })
     // trigger transport output, await
-    const respBuf = await transport.sender(reqBuf)
+    const respBuf = await transport.sender(reqBuf, { service, fn })
     // deserialize
     const resp: BentoResponseData<O> = transport.serializer.deserialize(respBuf)
 

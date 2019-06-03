@@ -12,7 +12,7 @@ declare type Client<T> = {
 declare type Service<T> = Constructor<T>
 export default class Bento {
   transport?: IBentoTransport
-  private serviceRegistry
+  serviceRegistry: Map<string, any>
     /**
      * makes this bento instance able to respond to a service definition's rpcs.
      * @param name service name

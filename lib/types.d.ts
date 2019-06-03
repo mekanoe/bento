@@ -22,7 +22,10 @@ export interface IBentoTransport {
      * sender will be called by Bento when data is
      * ready to be sent out.
      */
-  sender (data: Buffer): Promise<Buffer>
+  sender (data: Buffer, _: {
+      service: string;
+      fn: string;
+    }): Promise<Buffer>
     /**
      * reciever should be called by the implementer when
      * an RPC call is incoming.
