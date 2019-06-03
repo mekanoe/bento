@@ -1,39 +1,42 @@
 import { IBentoSerializer, BentoRequestData, BentoResponseData, BufferWithCtx } from '../types'
 
+const enc = new TextEncoder()
+const dec = new TextDecoder()
+
 export default class JSONSerializer implements IBentoSerializer {
   constructor (
     private opts: { verbose: boolean } = { verbose: false }
   ) {}
 
-  serialize<I> (input: BentoRequestData<I, null> | BentoResponseData<I>): Buffer {
+  serialize<I> (input: BentoRequestData<I, null> | BentoResponseData<I>): Uint8Array {
     if (this.opts.verbose === true) {
       console.group('serialize')
       console.log('input', input)
       console.groupEnd()
     }
 
-    return Buffer.from(JSON.stringify(input))
+    return enc.encode(JSON.stringify(input))
   }
 
-  deserialize<O> (buf: Buffer): BentoResponseData<O> {
+  deserialize<O> (buf: ArrayBuffer): BentoResponseData<O> {
     if (this.opts.verbose === true) {
       console.group('deserialize')
-      console.log('buf', buf.toString())
+      console.log('buf', dec.decode(buf))
       console.groupEnd()
     }
 
-    return JSON.parse(buf.toString())
+    return JSON.parse(dec.decode(buf))
   }
 
   deserializeRequest<O, C> (buf: BufferWithCtx<C>): BentoRequestData<O, C> {
     if (this.opts.verbose === true) {
       console.group('deserializeRequest')
-      console.log('buf', { ...buf, buffer: buf.buffer.toString() })
+      console.log('buf', { ...buf, buffer: dec.decode(buf.buffer) })
       console.groupEnd()
     }
 
     return {
-      ...JSON.parse(buf.buffer.toString()),
+      ...JSON.parse(dec.decode(buf.buffer)),
       ctx: buf.ctx
     }
   }

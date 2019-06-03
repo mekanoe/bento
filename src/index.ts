@@ -73,7 +73,7 @@ export default class Bento {
     }
 
     // serialize
-    const reqBuf: Buffer = transport.serializer.serialize({
+    const reqBuf = transport.serializer.serialize({
       service,
       fn,
       input
@@ -94,17 +94,17 @@ export default class Bento {
    * recieve a request from a client
    * @param buf buffer with contextual data attached (e.g. an http handler like koa)
    */
-  async receiveRequest<I, O, C> (buf: BufferWithCtx<C>, serializer: IBentoSerializer): Promise<Buffer> {
+  async receiveRequest<I, O, C> (buf: BufferWithCtx<C>, serializer: IBentoSerializer): Promise<ArrayBuffer> {
     const req: BentoRequestData<I, C> = serializer.deserializeRequest(buf)
 
     try {
       const respData = await this.call<I, O, C>(req)
-      const respBuf: Buffer = serializer.serialize({
+      const respBuf = serializer.serialize({
         response: respData
       })
       return respBuf
     } catch (e) {
-      const respBuf: Buffer = serializer.serialize({
+      const respBuf = serializer.serialize({
         error: true,
         errorMsg: e
       })

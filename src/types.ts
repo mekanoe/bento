@@ -14,7 +14,7 @@ export type BentoResponseData<T> = {
 }
 
 export type BufferWithCtx<C> = {
-  buffer: Buffer,
+  buffer: ArrayBuffer,
   ctx: C
 }
 
@@ -25,22 +25,22 @@ export interface IBentoTransport {
    * sender will be called by Bento when data is
    * ready to be sent out.
    */
-  sender (data: Buffer, _: { service: string, fn: string }): Promise<Buffer>
+  sender (data: ArrayBuffer, _: { service: string, fn: string }): Promise<ArrayBuffer>
 
   /**
    * reciever should be called by the implementer when
    * an RPC call is incoming.
    */
-  receiver<C> (data: BufferWithCtx<C>): Promise<Buffer>
+  receiver<C> (data: BufferWithCtx<C>): Promise<ArrayBuffer>
 }
 
 export interface IBentoSerializer {
   // client serializes a request into Buffer -- OR --
   // server serializes a response into Buffer
-  serialize<I> (input: BentoRequestData<I, null> | BentoResponseData<I>): Buffer
+  serialize<I> (input: BentoRequestData<I, null> | BentoResponseData<I>): ArrayBuffer
 
   // client deserializes a response from Buffer, but with NO context (null)
-  deserialize<O> (buf: Buffer): BentoResponseData<O>
+  deserialize<O> (buf: ArrayBuffer): BentoResponseData<O>
 
   // server deserializes a request from Buffer, but with a context
   deserializeRequest<O, C> (buf: BufferWithCtx<C>): BentoRequestData<O, C>

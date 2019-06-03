@@ -1,6 +1,9 @@
 import JSONSerializer from './json'
 import { BufferWithCtx, BentoResponseData, BentoRequestData } from '../types'
 
+const enc = new TextEncoder()
+const dec = new TextDecoder()
+
 describe('JSONSerializer', () => {
   const js = new JSONSerializer()
   const o = {
@@ -17,15 +20,13 @@ describe('JSONSerializer', () => {
   }
 
   it('serializes data into a buffer', () => {
-    const t: Buffer = js.serialize(o)
+    const t: ArrayBuffer = js.serialize(o)
 
-    expect(JSON.parse(t.toString())).toStrictEqual(o)
+    expect(JSON.parse(dec.decode(t))).toStrictEqual(o)
   })
 
   it('deserializes a response from a buffer', () => {
-    const fixture: Buffer = Buffer.from(
-      JSON.stringify(o)
-    )
+    const fixture = enc.encode(JSON.stringify(o))
     const t: BentoResponseData<typeof o.response> = js.deserialize(fixture)
 
     expect(t).toStrictEqual(o)
@@ -33,7 +34,7 @@ describe('JSONSerializer', () => {
 
   it('deserializes a request from a bufferwithctx', () => {
     const fixture: BufferWithCtx<typeof ctx> = {
-      buffer: Buffer.from(JSON.stringify(i)),
+      buffer: enc.encode(JSON.stringify(i)),
       ctx
     }
 
