@@ -1,12 +1,12 @@
 import Bento from '../index'
-import * as HelloWorldTest from './helloworld.mock'
+import { HelloWorldClient, HelloRequest } from './helloworld.mock'
 import sinon from 'sinon'
 // import JSONSerializer from '../serializers/json'
 // import Transport from '../src/transport'
 import { createServer, createClient } from './fake-transport'
 
 class TestHWServer {
-  async sayHello (ctx: any, request: HelloWorldTest.HelloRequest) {
+  async sayHello (ctx: any, request: HelloRequest) {
     return {
       message: `hello ${request.name}!`
     }
@@ -26,7 +26,7 @@ describe('HelloWorld mockup service', () => {
   // - client deserializes response
   // - client promise resolves
   const bentoServer = new Bento()
-  bentoServer.service(HelloWorldTest.default, TestHWServer)
+  bentoServer.service(HelloWorldClient.__SERVICE__, TestHWServer)
   const ttServer = createServer(bentoServer)
   sinon.spy(ttServer, 'sender')
   sinon.spy(ttServer, 'receiver')
@@ -36,9 +36,9 @@ describe('HelloWorld mockup service', () => {
   sinon.spy(ttClient, 'sender')
   sinon.spy(ttClient, 'receiver')
 
-  const client = bentoClient.client(HelloWorldTest.HelloWorldClient, ttClient)
+  const client = bentoClient.client(HelloWorldClient, ttClient)
   it('resolves its own RPCs', async () => {
-    const serverClient = bentoServer.client(HelloWorldTest.HelloWorldClient, ttServer)
+    const serverClient = bentoServer.client(HelloWorldClient, ttServer)
 
     expect(
       await serverClient.sayHello({ name: 'world' })
