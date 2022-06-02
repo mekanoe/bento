@@ -25,7 +25,7 @@
   "dependencies": {
     "camel-case": "^3.0.0",
     "fs-extra": "^8.0.1",
-    "protobufjs": "^6.8.8"
+    "protobufjs": "^6.11.3"
   },
   "scripts": {
     "lint": "tslint -p .",
